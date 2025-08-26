@@ -1,0 +1,33 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "words": [
+    "ggbond",
+    "monorepo",
+    "pnpm",
+    "eslint",
+    "prettier",
+    "commitlint",
+    "husky",
+    "cspell",
+    "tsconfig",
+    "devdeps",
+    "deps"
+  ],
+  "ignorePaths": [
+    "node_modules/**",
+    "dist/**",
+    "build/**",
+    "coverage/**",
+    "*.log",
+    "pnpm-lock.yaml",
+    "package-lock.json",
+    "yarn.lock"
+  ],
+  "ignoreWords": [
+    "typeof",
+    "keyof",
+    "readonly",
+    "infer"
+  ]
+}

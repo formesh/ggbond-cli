@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 运行 ESLint 检查
+pnpm lint
+
+# 运行 Prettier 检查
+pnpm format:check
+
+# 运行拼写检查
+pnpm spell:check
