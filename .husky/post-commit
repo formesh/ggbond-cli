@@ -1,0 +1,45 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# 检查是否启用自动发布 (设置环境变量 AUTO_PUBLISH=true 来启用)
+if [ "$AUTO_PUBLISH" != "true" ]; then
+  echo "ℹ️  自动发布已禁用。要启用请设置: export AUTO_PUBLISH=true"
+  exit 0
+fi
+
+# 检查是否是主分支的提交
+if [ "$(git branch --show-current)" = "main" ] || [ "$(git branch --show-current)" = "master" ]; then
+  echo "🚀 检测到主分支提交，开始自动发布流程..."
+  
+  # 进入CLI包目录
+  cd packages/cli
+  
+  # 检查package.json是否有版本变更
+  if git diff HEAD~1 HEAD --name-only | grep -q "packages/cli/package.json"; then
+    echo "📦 检测到package.json变更，开始构建和发布..."
+    
+    # 构建项目
+    echo "🔨 构建项目..."
+    pnpm build
+    
+    if [ $? -eq 0 ]; then
+      # 发布到npm
+      echo "📤 发布到npm..."
+      npm publish
+      
+      if [ $? -eq 0 ]; then
+        echo "✅ 自动发布完成！"
+      else
+        echo "❌ npm发布失败"
+        exit 1
+      fi
+    else
+      echo "❌ 构建失败，跳过发布"
+      exit 1
+    fi
+  else
+    echo "ℹ️  未检测到package.json版本变更，跳过发布"
+  fi
+else
+  echo "ℹ️  非主分支提交，跳过自动发布"
+fi

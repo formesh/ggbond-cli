@@ -19,7 +19,12 @@
     "commitlint": "commitlint --edit",
     "prepare": "husky",
     "dev:lint": "pnpm lint && pnpm format:check && pnpm spell:check",
-    "commit": "cz"
+    "commit": "cz",
+    "publish:cli": "cd packages/cli && pnpm build && npm publish",
+    "commit:publish": "AUTO_PUBLISH=true git commit",
+    "version:patch": "cd packages/cli && npm version patch",
+    "version:minor": "cd packages/cli && npm version minor",
+    "version:major": "cd packages/cli && npm version major"
   },
   "keywords": [],
   "author": "",
