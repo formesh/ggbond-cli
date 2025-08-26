@@ -1,12 +1,25 @@
 {
-  "name": "@ggbond-cli/cli",
+  "name": "ggbond97-cli",
   "version": "1.0.0",
-  "description": "GGBond CLI tool",
+  "description": "A modern CLI tool for creating React, Vue, and Vanilla projects with TypeScript support",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "bin": {
     "ggbond": "bin/ggbond"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "templates"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ggbond/ggbond-cli.git"
+  },
+  "homepage": "https://github.com/ggbond/ggbond-cli#readme",
+  "bugs": {
+    "url": "https://github.com/ggbond/ggbond-cli/issues"
   },
   "scripts": {
     "build": "tsc",
@@ -16,7 +29,14 @@
   },
   "keywords": [
     "cli",
-    "ggbond"
+    "scaffold",
+    "template",
+    "react",
+    "vue",
+    "typescript",
+    "vite",
+    "project-generator",
+    "boilerplate"
   ],
   "author": "GGBOND",
   "license": "MIT",
