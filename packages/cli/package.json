@@ -1,0 +1,26 @@
+{
+  "name": "@ggbond-cli/cli",
+  "version": "1.0.0",
+  "description": "GGBond CLI tool",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "ggbond": "bin/ggbond"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch --preserveWatchOutput",
+    "dev": "tsx src/index.ts",
+    "clean": "rimraf dist"
+  },
+  "keywords": [
+    "cli",
+    "ggbond"
+  ],
+  "author": "GGBOND",
+  "license": "MIT",
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  }
+}
