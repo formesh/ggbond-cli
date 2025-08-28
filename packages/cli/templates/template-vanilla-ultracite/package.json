@@ -1,0 +1,43 @@
+{
+  "name": "test-ultracite",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "prepare": "husky",
+    "lint": "biome check .",
+    "lint:fix": "biome check --write .",
+    "format": "biome format --write .",
+    "commit": "cz"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.2.0",
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "commitizen": "^4.3.1",
+    "cspell": "^9.2.0",
+    "cz-git": "^1.12.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.5",
+    "typescript": "~5.8.3",
+    "ultracite": "5.2.4",
+    "vite": "^7.1.2"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue,json}": [
+      "biome check --write",
+      "biome format --write"
+    ],
+    "*.{js,ts,vue,html,css,scss,md}": [
+      "cspell"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
+  }
+}
