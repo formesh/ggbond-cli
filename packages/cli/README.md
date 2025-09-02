@@ -17,7 +17,7 @@ yarn global add ggbond97-cli
 ### 创建新项目
 
 ```bash
-ggbond init my-project
+ggbond97 init my-project
 ```
 
 交互式选择：
@@ -28,25 +28,25 @@ ggbond init my-project
 
 ```bash
 # 启动开发服务器
-ggbond dev
+ggbond97 dev
 
 # 构建项目
-ggbond build
+ggbond97 build
 
 # 预览构建结果
-ggbond preview
+ggbond97 preview
 ```
 
 ### 命令选项
 
 ```bash
 # 指定端口和主机
-ggbond dev --port 3000 --host 0.0.0.0
-ggbond preview --port 4173
+ggbond97 dev --port 3000 --host 0.0.0.0
+ggbond97 preview --port 4173
 
 # 查看帮助
-ggbond --help
-ggbond init --help
+ggbond97 --help
+ggbond97 init --help
 ```
 
 ## 支持的模板
