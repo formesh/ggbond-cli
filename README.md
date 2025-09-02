@@ -2,10 +2,26 @@
 
 一个简单的项目脚手架工具，用于快速创建前端项目。
 
-## 安装
+## 快速开始
+
+### 使用 npx（推荐）
+
+无需安装，直接使用：
+
+```bash
+npx ggbond97-cli init my-project
+```
+
+### 全局安装
 
 ```bash
 npm install -g ggbond97-cli
+```
+
+安装后使用：
+
+```bash
+ggbond97 init my-project
 ```
 
 ## 使用
@@ -13,7 +29,11 @@ npm install -g ggbond97-cli
 ### 创建新项目
 
 ```bash
-ggbond init my-project
+# 推荐方式：使用 npx
+npx ggbond97-cli init my-project
+
+# 或者全局安装后使用
+ggbond97 init my-project
 ```
 
 支持的框架：

@@ -1,6 +1,6 @@
 {
   "name": "ggbond97-cli",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "A modern CLI tool for creating React, Vue, and Vanilla projects with TypeScript support",
   "type": "module",
   "main": "dist/index.js",

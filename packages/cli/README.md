@@ -2,7 +2,17 @@
 
 一个简单高效的项目脚手架工具，基于 Vite 构建。
 
-## 安装
+## 快速开始
+
+### 使用 npx（推荐）
+
+无需安装，直接使用：
+
+```bash
+npx ggbond97-cli init my-project
+```
+
+### 全局安装
 
 ```bash
 npm install -g ggbond97-cli
@@ -17,6 +27,10 @@ yarn global add ggbond97-cli
 ### 创建新项目
 
 ```bash
+# 推荐方式：使用 npx
+npx ggbond97-cli init my-project
+
+# 或者全局安装后使用
 ggbond97 init my-project
 ```
 
